@@ -61,6 +61,5 @@ sudo rm -rf mjpg-streamer
 echo -e "\e[1m\e[36mSetting up accesss via https://aquarium.local\e[0m\e[39m"
 sudo cp haproxy.cfg etc/haproxy/haproxy.cfg
 cat yamladdon >> /home/pi/.octoprint/config.yaml
-sudo echo "aquarium" > /etc/hostname
-sudo sed -i 's/raspberrypi/aquarium/g' /etc/hosts
+hostnamectl set-hostname aquarium
 echo -e "\e[1m\e[32mDone installing OctoPrint!\e[0m\e[39m"
