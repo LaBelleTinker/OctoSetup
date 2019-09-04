@@ -6,10 +6,10 @@ echo -e "\e[1m\e[36mCloning OctoPrint\e[0m\e[39m"
 git clone https://github.com/foosel/OctoPrint.git
 
 echo -e "\e[1m\e[36mCreating virtualenv\e[0m\e[39m"
-#virtualenv /home/pi/Aquarium
+virtualenv /home/pi/Aquarium
 cd OctoPrint
 echo -e "\e[1m\e[36mInstalling Octoprint\e[0m\e[39m"
-#/home/pi/Aquarium/bin/python setup.py -q install 
+/home/pi/Aquarium/bin/python setup.py -q install 
 cd ..
 sudo rm -rf OctoPrint
 /home/pi/Aquarium/bin/pip -qq install pip --upgrade
@@ -49,11 +49,6 @@ sudo cp webcamdaemon /home/pi/scripts
 sudo chmod +x /etc/init.d/octoprint
 sudo chmod +x /home/pi/scripts/webcam
 sudo chmod +x /home/pi/scripts/webcamdaemon
-echo -e "\e[1m\e[36mSetting up accesss via https://aquarium.local\e[0m\e[39m"
-sudo echo "aquarium" > /etc/hostname
-sudo sed -i 's/raspberrypi/aquarium/g' /etc/hosts
-sudo cp haproxy.cfg etc/haproxy/haproxy.cfg
-cat yamladdon >> /home/pi/.octoprint/config.yaml
 echo -e "\e[1m\e[36mCloning mjpg streamer\e[0m\e[39m"
 git clone https://github.com/jacksonliam/mjpg-streamer.git
 echo -e "\e[1m\e[36mInstalling mjpg streamer\e[0m\e[39m"
@@ -63,4 +58,9 @@ make
 sudo make install
 cd ..
 sudo rm -rf mjpg-streamer
+echo -e "\e[1m\e[36mSetting up accesss via https://aquarium.local\e[0m\e[39m"
+sudo cp haproxy.cfg etc/haproxy/haproxy.cfg
+cat yamladdon >> /home/pi/.octoprint/config.yaml
+sudo echo "aquarium" > /etc/hostname
+sudo sed -i 's/raspberrypi/aquarium/g' /etc/hosts
 echo -e "\e[1m\e[32mDone installing OctoPrint!\e[0m\e[39m"
