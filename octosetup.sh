@@ -39,7 +39,8 @@ echo -e "\e[1m\e[36mInstalling TouchUI plugin\e[0m\e[39m"
 /home/pi/Aquarium/bin/pip -qq install "https://github.com/BillyBlaze/OctoPrint-TouchUI/archive/master.zip"
 
 echo -e "\e[1m\e[36mSetting up autostart\e[0m\e[39m"
-echo "tightvncserver" >> /home/pi/.profile
+mkdir /home/pi/.config/autostart
+sudo cp tightvncdesktop /home/pi/.config/autostart
 sudo cp octoprint.init /etc/init.d/octoprint
 sudo cp octoprint.default /etc/default/octoprint
 echo -e "\e[1m\e[36mSetting up webcam\e[0m\e[39m"
