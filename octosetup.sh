@@ -2,6 +2,7 @@
 echo -e "\e[1m\e[36mInstalling requirements\e[0m\e[39m"
 sudo apt-get update
 sudo apt-get -qqy install python3-pip python3-dev python3-setuptools python3-virtualenv git libyaml-dev build-essential haproxy subversion libjpeg62-turbo-dev imagemagick ffmpeg libv4l-dev cmake avahi-daemon
+sudo pip3 install virtualenv
 echo -e "\e[1m\e[36mCloning OctoPrint\e[0m\e[39m"
 git clone https://github.com/foosel/OctoPrint.git
 
