@@ -7,7 +7,7 @@ echo -e "\e[1m\e[36mCloning OctoPrint\e[0m\e[39m"
 git clone https://github.com/foosel/OctoPrint.git
 
 echo -e "\e[1m\e[36mCreating virtualenv\e[0m\e[39m"
-venv /home/pi/Aquarium
+python3 -m venv /home/pi/Aquarium
 cd OctoPrint
 echo -e "\e[1m\e[36mInstalling Octoprint\e[0m\e[39m"
 /home/pi/Aquarium/bin/python3 setup.py -q install 
