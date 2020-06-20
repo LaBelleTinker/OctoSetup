@@ -9,7 +9,7 @@ echo -e "\e[1m\e[36mCreating virtualenv\e[0m\e[39m"
 virtualenv /home/pi/Aquarium
 cd OctoPrint
 echo -e "\e[1m\e[36mInstalling Octoprint\e[0m\e[39m"
-/home/pi/Aquarium/bin/python3 setup.py -q install 
+/home/pi/Aquarium/bin/python setup.py -q install 
 cd ..
 sudo rm -rf OctoPrint
 /home/pi/Aquarium/bin/pip -qq install pip --upgrade
