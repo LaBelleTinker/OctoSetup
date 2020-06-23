@@ -55,7 +55,7 @@ cd /home/pi/mjpg-streamer/mjpg-streamer-experimental
 export LD_LIBRARY_PATH=.
 make --silent
 sudo make --silent install
-cd ..
+cd /home/pi
 sudo rm -rf mjpg-streamer
 echo "\e[1m\e[36mSetting up accesss via https://aquarium.local\e[0m\e[39m"
 sudo hostnamectl set-hostname aquarium
