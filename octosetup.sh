@@ -27,9 +27,9 @@ if [ "$INSTALL_PLUGINS" != 'false' ]; then
     echo "\e[1m\e[36mInstalling Bed Level Visualizer plugin\e[0m\e[39m"
     /home/pi/Aquarium/bin/pip -qq install "https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip"
     echo "\e[1m\e[36mInstalling Cost Estimation plugin\e[0m\e[39m"
-    /home/pi/Aquarium/bin/pip -qq install "https://github.com/malnvenshorn/OctoPrint-CostEstimation/archive/master.zip"
+    /home/pi/Aquarium/bin/pip -qq install "https://github.com/OllisGit/OctoPrint-CostEstimation/releases/latest/download/master.zip"
     echo "\e[1m\e[36mInstalling Filament Manager plugin\e[0m\e[39m"
-    /home/pi/Aquarium/bin/pip -qq install "https://github.com/malnvenshorn/OctoPrint-FilamentManager/archive/master.zip"
+    /home/pi/Aquarium/bin/pip -qq install "https://github.com/OllisGit/OctoPrint-FilamentManager/releases/latest/download/master.zip"
     echo "\e[1m\e[36mInstalling File Manager plugin\e[0m\e[39m"
     /home/pi/Aquarium/bin/pip -qq install "https://github.com/Salandora/OctoPrint-FileManager/archive/master.zip"
     echo "\e[1m\e[36mInstalling Layer Display plugin\e[0m\e[39m"
@@ -47,7 +47,7 @@ if [ "$INSTALL_PLUGINS" != 'false' ]; then
     echo "\e[1m\e[36mInstalling Preheat Button plugin\e[0m\e[39m"
     /home/pi/Aquarium/bin/pip -qq install "https://github.com/marian42/octoprint-preheat/archive/master.zip"
     echo "\e[1m\e[36mInstalling OctoKlipper plugin\e[0m\e[39m"
-    /home/pi/Aquarium/bin/pip -qq install "https://github.com/mmone/OctoPrintKlipper/archive/master.zip"
+    /home/pi/Aquarium/bin/pip -qq install "https://github.com/AliceGrey/OctoprintKlipperPlugin/archive/master.zip"
 fi
 if [ "$SETUP_AUTOSTART" != 'false' ]; then
     echo "\e[1m\e[36mSetting up autostart\e[0m\e[39m"
