@@ -8,10 +8,10 @@
 #    SETUP_LOCAL_ACCESS
 echo "\e[1m\e[36mInstalling requirements\e[0m\e[39m"
 sudo apt-get -qq update
-sudo apt-get -qqy install python-pip python-dev python-setuptools python-virtualenv git libyaml-dev build-essential haproxy subversion imagemagick ffmpeg libv4l-dev cmake avahi-daemon wget gzip tar libjpeg8-dev imagemagick libv4l-dev virtualenv libffi-dev libncurses-dev libusb-dev avrdude gcc-avr binutils-avr avr-libc stm32flash dfu-util libnewlib-arm-none-eabi gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0
+sudo apt-get -qqy install python3-pip python3-dev python3-setuptools python3-venv git libyaml-dev build-essential git libyaml-dev build-essential haproxy subversion imagemagick ffmpeg libv4l-dev cmake avahi-daemon wget gzip tar libjpeg8-dev imagemagick libv4l-dev virtualenv libffi-dev libncurses-dev libusb-dev avrdude gcc-avr binutils-avr avr-libc stm32flash dfu-util libnewlib-arm-none-eabi gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0
 if [ "$SETUP_VIRTUALENV" != 'false' ]; then
     echo "\e[1m\e[36mSetting up virtualenv\e[0m\e[39m"
-    virtualenv -q /home/pi/Aquarium
+    python -m venv OctoPrint
     /home/pi/Aquarium/bin/pip -qq install pip --upgrade
     /home/pi/Aquarium/bin/pip -qq install -Iv rsa==4.0
 fi
