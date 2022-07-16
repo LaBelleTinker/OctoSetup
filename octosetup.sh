@@ -73,10 +73,10 @@ if [ "$INSTALL_PICAM" != 'false' ]; then
     cd /home/pi
     sudo rm -rf mjpg-streamer
 fi
-if [ "$SETUP_LOCAL_ACCESS" != 'false' ]; then
-    echo "\e[1m\e[36mSetting up accesss via https://aquarium.local\e[0m\e[39m"
-    sudo hostnamectl set-hostname aquarium
-    [ ! -f /etc/hostname ] && sudo echo "aquarium" > /etc/hostname
-    sudo sed -i 's/raspberrypi/aquarium/g' /etc/hosts
-fi
+# if [ "$SETUP_LOCAL_ACCESS" != 'false' ]; then
+#    echo "\e[1m\e[36mSetting up accesss via https://aquarium.local\e[0m\e[39m"
+#    sudo hostnamectl set-hostname aquarium
+#    [ ! -f /etc/hostname ] && sudo echo "aquarium" > /etc/hostname
+#    sudo sed -i 's/raspberrypi/aquarium/g' /etc/hosts
+# fi
 echo "\e[1m\e[32mDone installing OctoPrint!\e[0m\e[39m"
